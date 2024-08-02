@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block body %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="{{wonder.img.url}}" width="400" height="400"><br>
+
+        </div>
+    </div>
+</div>
+
+<div class="col-md-6">
+    <h2>{{wonder.name}}</h2>
+    <h4>{{wonder.desc}}</h4>
+    <a href="{% url 'update' wonder.id %}" class="btn btn-warning" role="button" >update</a>
+    <a href="{% url 'delete' wonder.id %}" class="btn btn-danger" role="button">delete</a>
+
+</div>
+
+
+{% endblock %}
